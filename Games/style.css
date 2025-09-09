@@ -1,0 +1,93 @@
+* {
+    margin:0px;
+    padding:0px;
+    text-align: center;
+}
+
+h1 {
+    background: linear-gradient(90deg, #0d223f, #0b3a6f);
+    color:#f7fafc;
+    height:5rem;
+    line-height: 5rem;
+}
+
+.choice {
+    height:165px;
+    width:165px;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    transition: transform 140ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.choice:hover {
+    cursor:pointer;
+    background-color: #0b3a6f;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.22);
+}
+img {
+    height:150px;
+    width:150px;
+    object-fit: cover;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.choices {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    margin-top: 5rem;
+}
+
+.score-board {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top:3rem;
+    gap:5rem;
+}
+
+#user-score , #comp-score {
+    font-size: 4rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+
+#msg {
+   background: #0b3a6f;
+   color:#f7fafc;
+   font-size: 2rem;
+   display: inline;
+   padding: 1rem;
+   border-radius: 1rem;
+   box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* Feedback states */
+.msg-win { background: #155724 !important; }
+.msg-lose { background: #6f0b0b !important; }
+.msg-draw { background: #0b3a6f !important; }
+
+.selected-win { outline: 6px solid #28a745; }
+.selected-lose { outline: 6px solid #dc3545; }
+.selected-draw { outline: 6px solid #0b3a6f; }
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(1200px 600px at 10% 10%, #0b3a6f 0%, transparent 60%),
+                radial-gradient(1000px 600px at 90% 20%, #0d223f 0%, transparent 60%),
+                linear-gradient(180deg, #0a1525 0%, #0b233f 100%);
+    color: #e6f0fa;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Reduce blue hover flash on focus */
+.choice:focus { outline: 4px solid #7db2ff; }
